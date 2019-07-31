@@ -1,0 +1,48 @@
+<br>
+<button mat-raised-button routerLink="/addcontact"> Add Contact </button>
+
+<table >
+  <thead> 
+  <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th> PhoneNo</th>
+        <th>City</th>  
+        <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users?.response">
+        <td>{{user?.name}}</td>
+        <td>{{user?.email}}</td>
+        <td>{{user?.phoneno}}</td>
+        <td>{{user?.city}}</td>
+        <td><button class="button button1" (click)="openDialog(user)">Edit</button>
+        <button  class="button button2"  (click) = "deleteContact(user._id)">Delete</button></td>
+    </tr>
+  </tbody>
+  </table>
+
+    
+
+
+
+     <!--<div class="container">
+        <div>
+          <div>
+            <div *ngFor="let user of users?.response">
+              <div class="card" text-align="center">
+                <ul>
+                  <li *ngIf="user.name"><b>Name: {{user?.name}}</b></li>
+                  <li>Email: {{user?.email}}</li>
+                  <li>PhoneNo: {{user?.phoneno}}</li>
+                  <li>City: {{user?.city}}</li>
+                  <button class="button button1" (click)="openDialog(user)">Edit</button>
+                  <button  class="button button2"  (click) = "deleteContact(user._id)">Delete</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div> -->

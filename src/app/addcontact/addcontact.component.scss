@@ -1,0 +1,23 @@
+form {
+  // margin: 0 auto;
+  margin-top: 200px;
+ }
+ .example-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1 auto;
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+.example-container > * {
+  width: 100%;
+}
+.example-card {
+  max-width: 300px;
+}
+
+ .example-button-row button,
+ .example-button-row a {
+  margin-right: 8px;
+ }

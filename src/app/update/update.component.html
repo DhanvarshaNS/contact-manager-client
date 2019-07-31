@@ -1,0 +1,31 @@
+<div class="login-container">
+    <mat-card class="example-card">
+        <form class="example-form">
+            <mat-card-title>Add Contact Details</mat-card-title>
+
+            <mat-form-field class="example-full-width">
+              <input matInput [formControl]="name" placeholder="Enter Name">
+              <mat-error *ngIf="name.invalid">{{getErrorMessage("name")}}</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width">
+                <input matInput [formControl]="email" placeholder="Enter EmailID">
+                <mat-error *ngIf="email.invalid">{{getErrorMessage("email")}}</mat-error>
+              </mat-form-field>
+              <br>
+              <mat-form-field class="example-full-width">
+                  <input matInput [formControl]="phoneno" placeholder="Enter ContactNumber">
+                  <mat-error *ngIf="phoneno.invalid">{{getErrorMessage("phoneno")}}</mat-error>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <input matInput [formControl]="city" placeholder="Enter City">
+                    <mat-error *ngIf="city.invalid">{{getErrorMessage("city")}}</mat-error>
+                  </mat-form-field>
+                  <br>
+        <br>
+        <button *ngIf="!isUpdate" mat-raised-button  (click)="updateContact()" color="primary">Update</button>
+        <button mat-raised-button routerLink="/contact" color="accent">Cancel</button>
+      </form>
+    </mat-card>
+   </div>
