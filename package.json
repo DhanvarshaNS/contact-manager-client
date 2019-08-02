@@ -1,5 +1,5 @@
 {
-  "name": "front-end",
+  "name": "contact-manager-client",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
