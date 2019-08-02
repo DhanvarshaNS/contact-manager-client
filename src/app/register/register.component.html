@@ -7,19 +7,20 @@
                     <td>
                       <mat-form-field class="example-full-width">
                       <input matInput placeholder="Username" [formControl]="username" name="username" required>
+                      <!--<mat-error *ngIf="username.invalid">{{getErrorMessage("username")}}</mat-error>-->
                       </mat-form-field>
                     </td>
                   </tr>
                   <tr>
                   <td><mat-form-field class="example-full-width">
                     <input matInput placeholder="Password" [formControl]="password" type="password" name="password" required>
+                   <!-- <mat-error *ngIf="password.invalid">{{getErrorMessage("password")}}</mat-error>-->
                   </mat-form-field></td>
                 </tr></table>
+                
+                <!--<button mat-raised-button (click)="register()" color="primary">Register</button>-->
               </form>
-              <mat-card-actions>
-                  <button mat-raised-button (click)="register()" color="primary">Register</button>
-                </mat-card-actions>
-    
-    
+              
+              <button mat-raised-button (click)="register()" color="primary">Register</button>
           </mat-card>
     </div>

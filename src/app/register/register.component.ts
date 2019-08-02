@@ -40,4 +40,14 @@ export class RegisterComponent implements OnInit {
   }
   ngOnInit() {
   }
+  //getErrorMessage(input) {
+    //switch (input) {
+     // case 'username':
+      //  return this.username.hasError('required') ? 'You must enter a value' : '';
+      //case 'password':
+       // return this.password.hasError('required') ? 'You must enter a value' : '';
+  
+    //}
+  // }
+
 }

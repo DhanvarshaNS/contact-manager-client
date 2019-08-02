@@ -21,7 +21,7 @@ export class AddcontactComponent implements OnInit {
   private users: any;
   createFormController() {
     this.name = new FormControl('', Validators.required);
-    this.email = new FormControl('', Validators.email);
+    this.email = new FormControl('', [Validators.required, Validators.email]);
     this.phoneno = new FormControl('', Validators.maxLength(10));
     this.city = new FormControl('', [Validators.minLength(4), Validators.maxLength(6)]);
 
@@ -42,12 +42,14 @@ export class AddcontactComponent implements OnInit {
   }
   ngOnInit() {
   }
- getErrorMessage(input: string) {
+ getErrorMessage(input) {
   switch (input) {
     case 'name':
       return this.name.hasError('required') ? 'You must enter a value' : '';
     case 'email':
-      return this.email.hasError('required') ? 'You must enter a email' : this.email.hasError('email') ? 'Not a valid email' : '';
+      return this.email.hasError('required') ? 'You must enter a value' :
+        this.email.hasError('email') ? 'Not a valid email' :
+            '';
     case 'phoneno':
       return this.phoneno.hasError('required') ? 'You must enter a value' : '';
     case 'city':

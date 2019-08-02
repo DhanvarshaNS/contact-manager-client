@@ -4,22 +4,24 @@
           <mat-card-title>Add Contact Details</mat-card-title>
 
           <mat-form-field class="example-full-width">
-            <input matInput [formControl]="name" placeholder="Enter Name">
+            <input matInput [formControl]="name" placeholder="Enter Name" required>
             <mat-error *ngIf="name.invalid">{{getErrorMessage("name")}}</mat-error>
           </mat-form-field>
           <br>
           <mat-form-field class="example-full-width">
-              <input matInput [formControl]="email" placeholder="Enter EmailID">
+              <input matInput placeholder="Enter your email" [formControl]="email" required>
               <mat-error *ngIf="email.invalid">{{getErrorMessage("email")}}</mat-error>
+              <!-- <input matInput [formControl]="email" placeholder="Enter EmailID">
+              <mat-error *ngIf="email.invalid">{{getErrorMessage("email")}}</mat-error> -->
             </mat-form-field>
             <br>
             <mat-form-field class="example-full-width">
-                <input matInput [formControl]="phoneno" placeholder="Enter ContactNumber">
+                <input matInput [formControl]="phoneno" placeholder="Enter ContactNumber" required>
                 <mat-error *ngIf="phoneno.invalid">{{getErrorMessage("phoneno")}}</mat-error>
               </mat-form-field>
               <br>
               <mat-form-field class="example-full-width">
-                  <input matInput [formControl]="city" placeholder="Enter City">
+                  <input matInput [formControl]="city" placeholder="Enter City" required>
                   <mat-error *ngIf="city.invalid">{{getErrorMessage("city")}}</mat-error>
                 </mat-form-field>
                 <br>

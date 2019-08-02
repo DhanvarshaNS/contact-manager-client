@@ -25,7 +25,7 @@
                   <br>
         <br>
         <button *ngIf="!isUpdate" mat-raised-button  (click)="updateContact()" color="primary">Update</button>
-        <button mat-raised-button routerLink="/contact" color="accent">Cancel</button>
+        <button *ngIf="!isUpdate" mat-raised-button routerLink="/contact" color="accent">Cancel</button>
       </form>
     </mat-card>
    </div>
